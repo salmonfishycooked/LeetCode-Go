@@ -1,4 +1,4 @@
-package _1_Two_Sum
+package _1_two_sum
 
 // twoSum
 // 一般思路，暴力枚举

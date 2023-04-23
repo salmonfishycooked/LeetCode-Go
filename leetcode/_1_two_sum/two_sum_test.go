@@ -1,4 +1,4 @@
-package _1_Two_Sum
+package _1_two_sum
 
 import (
 	"fmt"
