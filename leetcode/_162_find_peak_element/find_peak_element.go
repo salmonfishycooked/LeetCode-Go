@@ -1,4 +1,4 @@
-package _162_Find_Peak_Element
+package _162_find_peak_element
 
 // 二分查找
 // 时间复杂度：O(logn)
