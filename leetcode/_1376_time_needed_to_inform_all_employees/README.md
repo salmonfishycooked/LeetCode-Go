@@ -49,7 +49,7 @@ The tree structure of the employees in the company is shown.
 
 # 解法：深度优先搜索
 
-先将每个管理员对应管理的员工树建好，再进行遍历，注意通知员工这件事是异步的。
+先将每个管理员对应管理的员工树建好，再进行遍历，注意通知员工这件事是并行的。
 
 完整代码如下
 
