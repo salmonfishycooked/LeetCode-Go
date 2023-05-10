@@ -16,17 +16,19 @@ func permute(nums []int) (ans [][]int) {
 			return
 		}
 		for i := 0; i < n; i++ {
-			if !vis[i] {
-				tmp = append(tmp, nums[i])
-				vis[i] = true
-				backtrack(level + 1)
-				vis[i] = false
-				tmp = tmp[:len(tmp)-1]
+			if vis[i] {
+				continue
 			}
+			tmp = append(tmp, nums[i])
+			vis[i] = true
+			backtrack(level + 1)
+			vis[i] = false
+			tmp = tmp[:len(tmp)-1]
 		}
 	}
 	backtrack(0)
 	return
 }
+
 ```
 
