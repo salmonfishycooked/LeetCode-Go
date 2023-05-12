@@ -71,8 +71,6 @@ func max(a, b int) int {
 这里给出 Go 的实现。
 
 ```go
-package _1330
-
 func maxValueAfterReverse(nums []int) int {
 	n := len(nums)
 	sumDiff := 0
