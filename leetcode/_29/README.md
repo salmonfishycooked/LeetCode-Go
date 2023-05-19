@@ -51,6 +51,8 @@ func divide(dividend int, divisor int) (ans int) {
 
 > 时间复杂度：$O(log(\frac{dividend}{divisor}))$
 >
+> 在 $|divident| < |divisor|$ 的情况下，时间复杂度为 $O(1)$。
+>
 > 空间复杂度：$O(1)$
 
 `dividend` 与 `divisor` 分别为被除数和除数的大小。
