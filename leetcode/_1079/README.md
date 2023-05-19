@@ -6,8 +6,8 @@
 func numTilePossibilities(tiles string) (ans int) {
 	n := len(tiles)
 	vis := make([]bool, n)
-	var dfs func(pos int)
-	dfs = func(pos int) {
+	var backtrack func(pos int)
+	backtrack = func(pos int) {
 		if pos == n {
 			return
 		}
@@ -20,11 +20,11 @@ func numTilePossibilities(tiles string) (ans int) {
 			}
 			vis[i], m[tiles[i]] = true, true
 			ans++
-			dfs(pos + 1)
+			backtrack(pos + 1)
 			vis[i] = false
 		}
 	}
-	dfs(0)
+	backtrack(0)
 	return
 }
 ```
