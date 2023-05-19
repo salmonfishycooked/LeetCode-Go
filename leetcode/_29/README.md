@@ -53,4 +53,4 @@ func divide(dividend int, divisor int) (ans int) {
 >
 > 空间复杂度：$O(1)$
 
-`dividend` 与 `divisor` 分别为除数和被除数的大小。
+`dividend` 与 `divisor` 分别为被除数和除数的大小。
