@@ -1,6 +1,6 @@
 > [LeetCode 208][https://leetcode.cn/problems/implement-trie-prefix-tree]
 
-# 实现
+# Go 实现
 
 ```go
 type Trie struct {
@@ -61,4 +61,8 @@ func (t *Trie) searchNode(word string) *treeNode {
 	return node
 }
 ```
+
+> 时间复杂度：$O(|S|)$，$|S|$ 为每次插入或查询的字符串长度。
+>
+> 空间复杂度：$O(|T| \times Σ)$，$|T|$ 为所有不同字符串的长度之和，$Σ$ 为字符集的大小，在这里 $Σ = 26$。
 
