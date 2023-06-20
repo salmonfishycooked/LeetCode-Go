@@ -2,27 +2,20 @@ package _46
 
 func permute(nums []int) (ans [][]int) {
 	n := len(nums)
-	var backtrack func(int)
-	tmp := make([]int, 0, n)
-	vis := make([]bool, n)
-	backtrack = func(level int) {
-		if level == n {
-			t := make([]int, n)
-			copy(t, tmp)
-			ans = append(ans, t)
+	set := make([]int, n)
+	var dfs func(i, msk int)
+	dfs = func(i, msk int) {
+		if i == n {
+			ans = append(ans, append([]int{}, set...))
 			return
 		}
-		for i := 0; i < n; i++ {
-			if vis[i] {
-				continue
+		for j, v := range nums {
+			if (msk>>j)&1 == 1 {
+				set[i] = v
+				dfs(i+1, msk^(1<<j))
 			}
-			tmp = append(tmp, nums[i])
-			vis[i] = true
-			backtrack(level + 1)
-			vis[i] = false
-			tmp = tmp[:len(tmp)-1]
 		}
 	}
-	backtrack(0)
+	dfs(0, (1<<n)-1)
 	return
 }
